@@ -1,0 +1,122 @@
+/* AudioRecorder.css */
+.audio-recorder-container {
+    background-color: #ADD8E6; /* Light blue color */
+    min-height: calc(100vh - 60px);
+    padding: 40px;
+    text-align: center;
+    padding-bottom: 60px;
+    margin-bottom: 200px;
+}
+
+.record-button {
+    border: none;
+    border-radius: 50%;
+    background-color: #003366;
+    padding: 20px;
+    cursor: pointer;
+    outline: none;
+    transition: box-shadow 0.2s ease;
+    position: relative;
+}
+
+.record-button:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.record-button.glow {
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(255, 0, 0, 1);
+    }
+}
+
+.image-upload {
+    margin-top: 70px;
+    text-align: center;
+    padding: 60px;
+    border: 2px dashed #003366;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    min-height: 200px; /* Increased height for better drag-and-drop area */
+    width: 80%; /* Adjust the width as needed */
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    background-image: linear-gradient(45deg, #f0f0f0 25%, transparent 25%, transparent 75%, #f0f0f0 75%, #f0f0f0),
+                      linear-gradient(45deg, #f0f0f0 25%, transparent 25%, transparent 75%, #f0f0f0 75%, #f0f0f0);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    cursor: pointer;
+    position: relative;
+    color: #003366;
+    font-size: 24px; /* Added to make the text larger */
+    font-weight: bold; /* Optional: Makes the text bold */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-upload.dragging {
+    background-color: #003366;
+}
+
+.image-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Hide the input but make it clickable */
+    cursor: pointer;
+    color: #003366;
+}
+
+.image-upload-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #003366;
+    border: 2px solid #003366;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.image-upload-button:hover {
+    background-color: #266fbc;
+    color: white;
+}
+
+.image-preview {
+    margin-top: 15px;
+    max-width: 600px;
+    max-height: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    margin-bottom: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image-preview:hover {
+    transform: scale(1.05);
+}
+
+/* Ensures text inside the drag-and-drop box doesn't move around */
+.image-upload p {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: normal;
+    color: #003366;
+    text-align: center;
+}
